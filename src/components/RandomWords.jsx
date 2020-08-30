@@ -12,8 +12,6 @@ const GetGenderSuffix = (gender, adjEnding) => {
   if(adjEnding == 'a')
     prefix = 'n';
 
-  console.log("prefix: " + prefix);
-
   switch (gender) {
     case 'mas':
       return prefix + 'er';
