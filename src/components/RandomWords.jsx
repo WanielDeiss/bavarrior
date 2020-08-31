@@ -8,9 +8,7 @@ import Nouns from '../data/nouns';
 const RandomNumber = num => Math.floor((Math.random() * Math.floor(num)));
 const GetGenderSuffix = (gender, adjEnding) => {
 
-  let prefix = '';
-  if(adjEnding == 'a')
-  let prefix = 'n';
+  const prefix = adjEnding == 'a' ? 'n' : '';
 
   switch (gender) {
     case 'mas':
