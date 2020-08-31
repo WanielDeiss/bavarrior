@@ -6,14 +6,19 @@ import Adjectives from '../data/adjectives';
 import Nouns from '../data/nouns';
 
 const RandomNumber = num => Math.floor((Math.random() * Math.floor(num)));
-const GetGenderSuffix = gender => {
+const GetGenderSuffix = (gender, adjEnding) => {
+
+  let prefix = '';
+  if(adjEnding == 'a')
+  let prefix = 'n';
+
   switch (gender) {
     case 'mas':
-      return 'er';
+      return `${prefix}er`;
     case 'fem':
-      return 'e';
+      return `${prefix}e`;
     default:
-      return 's';
+      return `${prefix}s`;
   }
 };
 
@@ -23,8 +28,12 @@ const GetWords = () => {
   const RAN_ADJECTIVE_2 = RandomNumber(Adjectives.length);
 
   const NOUN = Nouns[RAN_NOUN];
-  const ADJECTIVE = Adjectives[RAN_ADJECTIVE] + GetGenderSuffix(NOUN.gender);
-  const ADJECTIVE_2 = Adjectives[RAN_ADJECTIVE_2] + GetGenderSuffix(NOUN.gender);
+
+  const RAN_ADJ_ORG = Adjectives[RAN_ADJECTIVE];
+  const ADJECTIVE = RAN_ADJ_ORG + GetGenderSuffix(NOUN.gender, RAN_ADJ_ORG.slice(-1));
+
+  const RAN_ADJ2_ORG = Adjectives[RAN_ADJECTIVE_2];
+  const ADJECTIVE_2 = RAN_ADJ2_ORG + GetGenderSuffix(NOUN.gender, RAN_ADJ2_ORG.slice(-1));
 
   return `Du ${ADJECTIVE} ${NOUN.word}, ${ADJECTIVE_2}!`;
 };
