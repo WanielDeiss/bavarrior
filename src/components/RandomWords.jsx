@@ -8,17 +8,17 @@ import Nouns from '../data/nouns';
 const RandomNumber = num => Math.floor((Math.random() * Math.floor(num)));
 const GetGenderSuffix = (gender, adjEnding) => {
 
-  var prefix = '';
+  let prefix = '';
   if(adjEnding == 'a')
-    prefix = 'n';
+  let prefix = 'n';
 
   switch (gender) {
     case 'mas':
-      return prefix + 'er';
+      return '${prefix}er';
     case 'fem':
-      return prefix + 'e';
+      return '${prefix}e';
     default:
-      return prefix + 's';
+      return '${prefix}s';
   }
 };
 
