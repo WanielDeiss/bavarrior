@@ -14,11 +14,11 @@ const GetGenderSuffix = (gender, adjEnding) => {
 
   switch (gender) {
     case 'mas':
-      return ´${prefix}er´;
+      return `${prefix}er`;
     case 'fem':
-      return ´${prefix}e´;
+      return `${prefix}e`;
     default:
-      return ´${prefix}s´;
+      return `${prefix}s`;
   }
 };
 
