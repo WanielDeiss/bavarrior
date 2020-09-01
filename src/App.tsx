@@ -21,9 +21,9 @@ class App extends React.Component<{}, BavarriorState> {
       <div id="wrapper">
         <div className="words">
           <h1>{this.state.bavarrior}</h1>
-          <a onClick={() => this.doBavarrior()}>
+          <button className="btn" onClick={() => this.doBavarrior()}>
             <ArrowRepeat size={48} />
-          </a>
+          </button>
         </div>
       </div>
     );
