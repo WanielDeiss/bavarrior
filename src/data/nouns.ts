@@ -1,4 +1,4 @@
-export interface Nouns {
+export interface Noun {
   word: string;
   gender: 'mas' | 'fem' | 'neu';
 }
@@ -92,4 +92,4 @@ export default [
   { word: 'Zipperer', gender: 'mas' },
   { word: 'Zwidawurzn', gender: 'fem' },
   { word: 'Zuzla', gender: 'mas' },
-] as Nouns[];
+] as Noun[];
