@@ -26,6 +26,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "homepage": "http://wanieldeiss.github.io/bavarrior",
   "browserslist": {
     "production": [
       ">0.2%",
