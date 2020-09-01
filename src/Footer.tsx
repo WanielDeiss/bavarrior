@@ -11,7 +11,11 @@ function Footer() {
       {githubContributors.map((contributor, index) => {
         return (
           <span>
-            <a href={contributor.githubProfileUrl} target="_blank">
+            <a
+              href={contributor.githubProfileUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {contributor.name}
             </a>
             {index < contributorCount - 1 ? ', ' : null}
