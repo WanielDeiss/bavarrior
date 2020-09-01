@@ -5,9 +5,11 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import GithubRibbon from './GithubRibbon';
 
 ReactDOM.render(
   <React.StrictMode>
+    <GithubRibbon />
     <App />
   </React.StrictMode>,
   document.getElementById('root')
