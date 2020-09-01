@@ -39,4 +39,4 @@ export default [
   'zamgschissn',
   'zamgsuffa',
   'zwida',
-];
+] as string[];
